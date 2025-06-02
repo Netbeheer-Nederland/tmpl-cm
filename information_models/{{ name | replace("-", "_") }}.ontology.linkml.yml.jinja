@@ -1,8 +1,9 @@
+{%- set name_uri title | lower | replace(" ", "_") -%}
 name: {{ name }}
 description: |-
   {{ description }}
 title: {{ title }}
-id: https://data.nbnl.info/ontology/{{ title | lower }}
+id: https://data.nbnl.info/ontology/{{ name_uri }}
 annotations:
   nbility_function: C.6.2.1. Aansluitingen/allocatiepunten beheren
 license: https://www.apache.org/licenses/LICENSE-2.0.txt
@@ -15,7 +16,7 @@ imports:
 prefixes:
   linkml: https://w3id.org/linkml/
   nbnl: https://begrippen.netbeheernederland.nl/energiesysteembeheer/nl/page/
-  this: https://id.nbnl.info/ontology/{{ title | lower }}/
+  this: https://id.nbnl.info/ontology/{{ name_uri }}/
   nbility: https://nbility-model.github.io/NBility-business-capabilities-Archi/
 default_prefix: this
 default_range: Tekst

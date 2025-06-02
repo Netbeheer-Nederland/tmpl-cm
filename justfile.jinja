@@ -52,7 +52,7 @@ initialize:
 
     git init -b main
 
-    git remote add origin git@github.com:{{ org }} / {{ name }}.git
+    git remote add origin git@github.com:{{ org }}/{{ name }}.git
     git fetch
 
     git add .
@@ -134,7 +134,7 @@ _post-process-linkml-schema:
     @echo
     sed -i '/^version: .*$/d' "artifacts/information_models/{{ filename }}.ontology.linkml.yml"
     @if [ -z ${VERSION:-} ]; then \
-        sed -i "/^name: .*$/a version: {{shell(ref_name)}}" "artifacts/information_models/{{ filename }}.ontology.linkml.yml"; \
+        sed -i "/^name: .*$/a version: {{ '{{shell(ref_name)}}' }}" "artifacts/information_models/{{ filename }}.ontology.linkml.yml"; \
     else \
         sed -i "/^name: .*$/a version: ${VERSION}" "artifacts/information_models/{{ filename }}.ontology.linkml.yml"; \
     fi
