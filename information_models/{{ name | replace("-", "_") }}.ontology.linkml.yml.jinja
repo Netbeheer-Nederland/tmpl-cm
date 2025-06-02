@@ -1,4 +1,4 @@
-{%- set name_uri title | lower | replace(" ", "_") -%}
+{%- set name_uri = title | lower | replace(" ", "_") -%}
 name: {{ name }}
 description: |-
   {{ description }}
