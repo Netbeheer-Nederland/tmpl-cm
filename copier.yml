@@ -1,0 +1,18 @@
+_answers_file: .copier-answers.yml
+
+name:
+  type: str
+  help: Name of the conceptual model…
+  placeholder: im-some-title
+title:
+  type: str
+  help: Title of the conceptual model…
+  placeholder: Some Title
+description:
+  type: str
+  help: Describe what the conceptual model is about…
+  placeholder: This is the conceptual model “Some Title”.
+org:
+  type: str
+  help: Please provide the GitHub organisation (namespace) to use…
+  default: Netbeheer-Nederland
